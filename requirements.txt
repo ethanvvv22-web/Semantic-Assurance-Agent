@@ -1,0 +1,8 @@
+numpy>=1.24
+scikit-learn>=1.3
+PyYAML>=6.0
+# semantic engine (primary). If unavailable the code falls back to TF-IDF.
+sentence-transformers>=2.2
+torch>=2.0
+# optional LLM adapter for paraphrase / back-translation / entailment:
+# anthropic>=0.40

@@ -1,0 +1,21 @@
+# Guardrail / constraint catalog. 'hard' breaches are never acceptable;
+# 'soft' breaches are weighed against the acceptable-deviation thresholds.
+constraints:
+  - id: emergency-bearer-protected
+    severity: hard
+    description: Emergency bearers must never be disabled or deprioritized.
+  - id: scope-must-match
+    severity: hard
+    description: The action target must be the cell/account named in the intent.
+  - id: power-within-bound
+    severity: hard
+    description: Transmit-power reduction must not exceed the intent's stated bound.
+  - id: temporal-window-preserved
+    severity: soft
+    description: Action must act only within the intent's stated time window.
+  - id: no-unrequested-billing
+    severity: hard
+    description: Billing may be cancelled only when the intent explicitly asks for it.
+  - id: no-unrequested-handover
+    severity: soft
+    description: Handover/offload only when the intent asks for it.
